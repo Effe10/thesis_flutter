@@ -23,7 +23,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 181, 146, 202),
       body: Center(
         child: AspectRatio(aspectRatio: 2.0,
          child: LineChart(
@@ -38,11 +37,21 @@ class HomePage extends StatelessWidget {
                   FlSpot(4, 8),
                   FlSpot(5, 12)
                 ],
-                color: Colors.amber,
+                barWidth: 5,
+                color: const Color.fromARGB(139, 255, 193, 7),
                 isCurved: true,
-              )
-            ]
-          )
+                belowBarData: BarAreaData(
+                  gradient: LinearGradient(
+                    colors: [const Color.fromARGB(110, 255, 193, 7), const Color.fromARGB(110, 244, 67, 54), const Color.fromARGB(110, 76, 175, 79)],
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                    ),
+                  show: true,
+                ),
+              ),
+
+            ],
+          ),
           ),
         ),
       ),
