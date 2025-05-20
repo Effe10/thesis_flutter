@@ -14,6 +14,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        colorScheme: ColorScheme.dark(
+          primary: Colors.blue,
+          secondary: Colors.blueAccent,
+        ),
+        scaffoldBackgroundColor: const Color(0xFF181818),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF222222),
+        ),
+        cardColor: const Color(0xFF232323),
+      ),
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.dark,
       home: HomePage(),
     ); //MeterialApp
   }
@@ -24,12 +37,18 @@ class PredictionEntry {
   final String date;
   final double predictionProbability;
   final int actualOutcome;
+  final double stress;
+  final double physical;
+  final double sleep;
 
   PredictionEntry({
     required this.personId,
     required this.date,
     required this.predictionProbability,
     required this.actualOutcome, 
+    required this.stress,
+    required this.physical,
+    required this.sleep,
   });
 
   factory PredictionEntry.fromJson(Map<String, dynamic> json) {
@@ -38,6 +57,9 @@ class PredictionEntry {
       date: json['date'],
       predictionProbability: (json['prediction_probability'] as num).toDouble(),
       actualOutcome: json['actual_outcome'] as int,
+      stress: (json['stress_value'] as num).toDouble(),
+      physical: (json['physical_value'] as num).toDouble(),
+      sleep: (json['sleep_value'] as num).toDouble(),
     );
   }
 }
@@ -122,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                   radius: 4,
                   color: Colors.blue,
                   strokeWidth: 2,
-                  strokeColor: Colors.white,
+                  strokeColor: const Color.fromARGB(255, 209, 209, 209),
                 );
               },
             ),
@@ -149,7 +171,7 @@ class _HomePageState extends State<HomePage> {
             sideTitles: SideTitles(
               showTitles: true,
               interval: 0.2,
-              reservedSize: 40,
+              reservedSize: 38,
               maxIncluded: true,
               minIncluded: false,
               getTitlesWidget: (value, meta) {
@@ -184,9 +206,32 @@ class _HomePageState extends State<HomePage> {
             getTooltipItems: (List<LineBarSpot> touchedSpots) {
               return touchedSpots.map((spot) {
                 final entry = sortedEntries[spot.x.toInt()].value;
+                final sleep = ((entry.sleep / 60)/7);
+                final physical = ((entry.physical / 60)/7);
+                final stress = ((entry.stress / 60)/7);
+
+                String buildBar(double value, {double maxValue = 8.0, int length = 10}) {
+                  final normalized = value.clamp(0, maxValue) / maxValue;
+                  final filled = (normalized * length).round();
+                  return '█' * filled + '⠀' * (length - filled);
+                }
+
                 return LineTooltipItem(
-                  '${entry.date}\n${(entry.predictionProbability * 100).toStringAsFixed(1)}%',
-                  const TextStyle(color: Colors.white),
+                  '',
+                  const TextStyle(),
+                  children: [
+                    TextSpan(text: '${entry.date}\n\n'),
+                    TextSpan(text: 'Sleep:\n'),
+                    TextSpan(text: buildBar(sleep, maxValue: 8.0),style: const TextStyle(color: Colors.deepPurple)),
+                    TextSpan(text: '\n${sleep.toStringAsFixed(1)}h\n'),
+                    TextSpan(text: 'Physical:\n'),
+                    TextSpan(text: buildBar(physical, maxValue: 1.0), style: const TextStyle(color: Colors.yellow)),
+                    TextSpan(text: '\n${physical.toStringAsFixed(1)}h\n'),
+                    TextSpan(text: 'Stress:\n'),
+                    TextSpan(text: buildBar(stress, maxValue: 1.0), style: const TextStyle(color: Colors.red)),
+                    TextSpan(text: '\n${stress.toStringAsFixed(1)}h\n'),
+                    TextSpan(text: '\nPrediction Probability:\n${(entry.predictionProbability * 100).toStringAsFixed(1)}%\n'),
+                  ],
                 );
               }).toList();
             },
@@ -237,7 +282,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     PieChartSectionData(
                       value: (1 - lastValue) * 100,
-                      color: Colors.grey[300],
+                      color: const Color(0xFF222222),
                       title: '',
                       radius: 50,
                     ),
@@ -307,7 +352,7 @@ class _HomePageState extends State<HomePage> {
                     const SizedBox(height: 24),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.only(right: 15.0),
+                        padding: const EdgeInsets.only(right: 15.0, left: 5),
                         child: _buildChart(),
                       ),
                     ),

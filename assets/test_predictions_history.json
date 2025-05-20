@@ -7,39 +7,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 128.74758095238096,
-        "raw_value": 901.2330666666668,
-        "value_interpretation": "Stress: 2.1 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 17.11335238095238,
-        "raw_value": 119.79346666666666,
-        "value_interpretation": "Physical activity: 0.3 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 472.2623907268171,
-        "raw_value": 3305.8367350877197,
-        "value_interpretation": "Sleep: 7.9 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 3.0,
-        "raw_value": 3.0
-      }
-    ],
+    "stress_value": 901.2330666666668,
+    "physical_value": 119.79346666666666,
+    "sleep_value": 3305.8367350877197,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -50,39 +20,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.13638755823929188,
-        "base_feature": "stress",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Stress: 0.0 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.12882626288131585,
-        "base_feature": "sleep",
-        "actual_value": 396.41478721804515,
-        "raw_value": 2774.903510526316,
-        "value_interpretation": "Sleep: 6.6 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.03280715607079695,
-        "base_feature": "person",
-        "actual_value": 3.0,
-        "raw_value": 3.0
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.031968068558584056,
-        "base_feature": "physical",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Physical activity: 0.0 hours per day"
-      }
-    ],
+    "stress_value": 0.0,
+    "physical_value": 0.0,
+    "sleep_value": 2774.903510526316,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -93,39 +33,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 159.73074285714287,
-        "raw_value": 1118.1152000000002,
-        "value_interpretation": "Stress: 2.7 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 16.065371428571428,
-        "raw_value": 112.4576,
-        "value_interpretation": "Physical activity: 0.3 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 419.73825714285715,
-        "raw_value": 2938.1678,
-        "value_interpretation": "Sleep: 7.0 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 4.0,
-        "raw_value": 4.0
-      }
-    ],
+    "stress_value": 1118.1152000000002,
+    "physical_value": 112.4576,
+    "sleep_value": 2938.1678,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -136,39 +46,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 136.33973333333333,
-        "raw_value": 954.3781333333334,
-        "value_interpretation": "Stress: 2.3 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 5.8908,
-        "raw_value": 41.2356,
-        "value_interpretation": "Physical activity: 0.1 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 468.16163333333327,
-        "raw_value": 3277.131433333333,
-        "value_interpretation": "Sleep: 7.8 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 4.0,
-        "raw_value": 4.0
-      }
-    ],
+    "stress_value": 954.3781333333334,
+    "physical_value": 41.2356,
+    "sleep_value": 3277.131433333333,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -179,39 +59,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 124.05127619047619,
-        "raw_value": 868.3589333333333,
-        "value_interpretation": "Stress: 2.1 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 23.402552380952383,
-        "raw_value": 163.81786666666667,
-        "value_interpretation": "Physical activity: 0.4 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 499.6608131324406,
-        "raw_value": 3497.625691927084,
-        "value_interpretation": "Sleep: 8.3 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 1.0,
-        "raw_value": 1.0
-      }
-    ],
+    "stress_value": 868.3589333333333,
+    "physical_value": 163.81786666666667,
+    "sleep_value": 3497.625691927084,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -222,39 +72,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 127.45531428571428,
-        "raw_value": 892.1872,
-        "value_interpretation": "Stress: 2.1 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 26.138552380952376,
-        "raw_value": 182.96986666666663,
-        "value_interpretation": "Physical activity: 0.4 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 413.7730785714285,
-        "raw_value": 2896.41155,
-        "value_interpretation": "Sleep: 6.9 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 2.0,
-        "raw_value": 2.0
-      }
-    ],
+    "stress_value": 892.1872,
+    "physical_value": 182.96986666666663,
+    "sleep_value": 2896.41155,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -265,39 +85,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 223.34758095238092,
-        "raw_value": 1563.4330666666665,
-        "value_interpretation": "Stress: 3.7 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 14.399199999999999,
-        "raw_value": 100.7944,
-        "value_interpretation": "Physical activity: 0.2 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 459.5013319196429,
-        "raw_value": 3216.5093234375004,
-        "value_interpretation": "Sleep: 7.7 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 1.0,
-        "raw_value": 1.0
-      }
-    ],
+    "stress_value": 1563.4330666666665,
+    "physical_value": 100.7944,
+    "sleep_value": 3216.5093234375004,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -308,39 +98,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 163.15017142857144,
-        "raw_value": 1142.0512,
-        "value_interpretation": "Stress: 2.7 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 19.24190476190476,
-        "raw_value": 134.69333333333333,
-        "value_interpretation": "Physical activity: 0.3 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 450.75616834077385,
-        "raw_value": 3155.293178385417,
-        "value_interpretation": "Sleep: 7.5 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 1.0,
-        "raw_value": 1.0
-      }
-    ],
+    "stress_value": 1142.0512,
+    "physical_value": 134.69333333333333,
+    "sleep_value": 3155.293178385417,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -351,39 +111,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 153.18430476190477,
-        "raw_value": 1072.2901333333334,
-        "value_interpretation": "Stress: 2.6 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 12.924780952380955,
-        "raw_value": 90.47346666666668,
-        "value_interpretation": "Physical activity: 0.2 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 512.7834240699406,
-        "raw_value": 3589.4839684895837,
-        "value_interpretation": "Sleep: 8.5 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 1.0,
-        "raw_value": 1.0
-      }
-    ],
+    "stress_value": 1072.2901333333334,
+    "physical_value": 90.47346666666668,
+    "sleep_value": 3589.4839684895837,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -394,39 +124,9 @@
     "actual_outcome": 1,
     "correct_prediction": 0,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 27.486780952380947,
-        "raw_value": 192.40746666666664,
-        "value_interpretation": "Stress: 0.5 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 2.3377904761904764,
-        "raw_value": 16.364533333333334,
-        "value_interpretation": "Physical activity: 0.0 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 512.6294124255952,
-        "raw_value": 3588.4058869791666,
-        "value_interpretation": "Sleep: 8.5 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 1.0,
-        "raw_value": 1.0
-      }
-    ],
+    "stress_value": 192.40746666666664,
+    "physical_value": 16.364533333333334,
+    "sleep_value": 3588.4058869791666,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -437,39 +137,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 159.0672,
-        "raw_value": 1113.4704000000002,
-        "value_interpretation": "Stress: 2.7 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 19.419542857142858,
-        "raw_value": 135.9368,
-        "value_interpretation": "Physical activity: 0.3 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 458.8073683407738,
-        "raw_value": 3211.6515783854165,
-        "value_interpretation": "Sleep: 7.6 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 1.0,
-        "raw_value": 1.0
-      }
-    ],
+    "stress_value": 1113.4704000000002,
+    "physical_value": 135.9368,
+    "sleep_value": 3211.6515783854165,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -480,39 +150,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 180.0495238095238,
-        "raw_value": 1260.3466666666666,
-        "value_interpretation": "Stress: 3.0 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 6.516666666666666,
-        "raw_value": 45.61666666666666,
-        "value_interpretation": "Physical activity: 0.1 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 356.9880087912088,
-        "raw_value": 2498.9160615384617,
-        "value_interpretation": "Sleep: 5.9 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 4.0,
-        "raw_value": 4.0
-      }
-    ],
+    "stress_value": 1260.3466666666666,
+    "physical_value": 45.61666666666666,
+    "sleep_value": 2498.9160615384617,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -523,39 +163,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.13638755823929188,
-        "base_feature": "stress",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Stress: 0.0 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.12882626288131585,
-        "base_feature": "sleep",
-        "actual_value": 396.41478721804515,
-        "raw_value": 2774.903510526316,
-        "value_interpretation": "Sleep: 6.6 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.03280715607079695,
-        "base_feature": "person",
-        "actual_value": 3.0,
-        "raw_value": 3.0
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.031968068558584056,
-        "base_feature": "physical",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Physical activity: 0.0 hours per day"
-      }
-    ],
+    "stress_value": 0.0,
+    "physical_value": 0.0,
+    "sleep_value": 2774.903510526316,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -566,39 +176,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 101.8544761904762,
-        "raw_value": 712.9813333333334,
-        "value_interpretation": "Stress: 1.7 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 46.124399999999994,
-        "raw_value": 322.8708,
-        "value_interpretation": "Physical activity: 0.8 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 459.8430560714286,
-        "raw_value": 3218.9013925,
-        "value_interpretation": "Sleep: 7.7 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 2.0,
-        "raw_value": 2.0
-      }
-    ],
+    "stress_value": 712.9813333333334,
+    "physical_value": 322.8708,
+    "sleep_value": 3218.9013925,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -609,39 +189,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 230.4248380952381,
-        "raw_value": 1612.9738666666667,
-        "value_interpretation": "Stress: 3.8 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 19.4504380952381,
-        "raw_value": 136.1530666666667,
-        "value_interpretation": "Physical activity: 0.3 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 460.10769047619044,
-        "raw_value": 3220.753833333333,
-        "value_interpretation": "Sleep: 7.7 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 4.0,
-        "raw_value": 4.0
-      }
-    ],
+    "stress_value": 1612.9738666666667,
+    "physical_value": 136.1530666666667,
+    "sleep_value": 3220.753833333333,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -652,39 +202,9 @@
     "actual_outcome": 1,
     "correct_prediction": 0,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 150.07931428571428,
-        "raw_value": 1050.5552,
-        "value_interpretation": "Stress: 2.5 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 7.86087619047619,
-        "raw_value": 55.02613333333333,
-        "value_interpretation": "Physical activity: 0.1 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 529.8183090773808,
-        "raw_value": 3708.728163541666,
-        "value_interpretation": "Sleep: 8.8 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 1.0,
-        "raw_value": 1.0
-      }
-    ],
+    "stress_value": 1050.5552,
+    "physical_value": 55.02613333333333,
+    "sleep_value": 3708.728163541666,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -695,39 +215,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.13638755823929188,
-        "base_feature": "stress",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Stress: 0.0 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.12882626288131585,
-        "base_feature": "sleep",
-        "actual_value": 413.8594974358975,
-        "raw_value": 2897.0164820512823,
-        "value_interpretation": "Sleep: 6.9 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.03280715607079695,
-        "base_feature": "person",
-        "actual_value": 4.0,
-        "raw_value": 4.0
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.031968068558584056,
-        "base_feature": "physical",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Physical activity: 0.0 hours per day"
-      }
-    ],
+    "stress_value": 289.15413333333333,
+    "physical_value": 244.3545333333333,
+    "sleep_value": 2609.02,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -738,39 +228,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 382.6472380952381,
-        "raw_value": 2678.5306666666665,
-        "value_interpretation": "Stress: 6.4 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 11.943999999999999,
-        "raw_value": 83.60799999999999,
-        "value_interpretation": "Physical activity: 0.2 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 419.54309010989016,
-        "raw_value": 2936.801630769231,
-        "value_interpretation": "Sleep: 7.0 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 4.0,
-        "raw_value": 4.0
-      }
-    ],
+    "stress_value": 2678.5306666666665,
+    "physical_value": 83.60799999999999,
+    "sleep_value": 2936.801630769231,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -781,39 +241,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 428.45097142857145,
-        "raw_value": 2999.1568,
-        "value_interpretation": "Stress: 7.1 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 16.114819047619047,
-        "raw_value": 112.80373333333334,
-        "value_interpretation": "Physical activity: 0.3 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 380.60087142857145,
-        "raw_value": 2664.2061000000003,
-        "value_interpretation": "Sleep: 6.3 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 4.0,
-        "raw_value": 4.0
-      }
-    ],
+    "stress_value": 2999.1568,
+    "physical_value": 112.80373333333334,
+    "sleep_value": 2664.2061000000003,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -824,39 +254,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 232.6030476190476,
-        "raw_value": 1628.2213333333332,
-        "value_interpretation": "Stress: 3.9 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 13.262723809523811,
-        "raw_value": 92.83906666666668,
-        "value_interpretation": "Physical activity: 0.2 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 457.55542715773805,
-        "raw_value": 3202.8879901041664,
-        "value_interpretation": "Sleep: 7.6 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 1.0,
-        "raw_value": 1.0
-      }
-    ],
+    "stress_value": 1628.2213333333332,
+    "physical_value": 92.83906666666668,
+    "sleep_value": 3202.8879901041664,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -867,39 +267,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 183.95207619047622,
-        "raw_value": 1287.6645333333336,
-        "value_interpretation": "Stress: 3.1 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 13.866780952380953,
-        "raw_value": 97.06746666666668,
-        "value_interpretation": "Physical activity: 0.2 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 418.2153523809523,
-        "raw_value": 2927.507466666666,
-        "value_interpretation": "Sleep: 7.0 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 4.0,
-        "raw_value": 4.0
-      }
-    ],
+    "stress_value": 1287.6645333333336,
+    "physical_value": 97.06746666666668,
+    "sleep_value": 2927.507466666666,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -910,39 +280,9 @@
     "actual_outcome": 1,
     "correct_prediction": 0,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.21042361089751463,
-        "base_feature": "stress",
-        "actual_value": 89.30201904761905,
-        "raw_value": 625.1141333333334,
-        "value_interpretation": "Stress: 1.5 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.16782766330592985,
-        "base_feature": "sleep",
-        "actual_value": 462.48391842105264,
-        "raw_value": 3237.3874289473683,
-        "value_interpretation": "Sleep: 7.7 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.06560960430844709,
-        "base_feature": "person",
-        "actual_value": 3.0,
-        "raw_value": 3.0
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.06135585160874193,
-        "base_feature": "physical",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Physical activity: 0.0 hours per day"
-      }
-    ],
+    "stress_value": 625.1141333333334,
+    "physical_value": 0.0,
+    "sleep_value": 3237.3874289473683,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -953,39 +293,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 391.9360761904762,
-        "raw_value": 2743.552533333333,
-        "value_interpretation": "Stress: 6.5 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 16.114819047619047,
-        "raw_value": 112.80373333333334,
-        "value_interpretation": "Physical activity: 0.3 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 346.34777142857143,
-        "raw_value": 2424.4344,
-        "value_interpretation": "Sleep: 5.8 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 4.0,
-        "raw_value": 4.0
-      }
-    ],
+    "stress_value": 2743.552533333333,
+    "physical_value": 112.80373333333334,
+    "sleep_value": 2424.4344,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -996,39 +306,9 @@
     "actual_outcome": 1,
     "correct_prediction": 0,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 21.439085714285714,
-        "raw_value": 150.0736,
-        "value_interpretation": "Stress: 0.4 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 1.4112190476190474,
-        "raw_value": 9.878533333333332,
-        "value_interpretation": "Physical activity: 0.0 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 482.75498458646615,
-        "raw_value": 3379.284892105263,
-        "value_interpretation": "Sleep: 8.0 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 3.0,
-        "raw_value": 3.0
-      }
-    ],
+    "stress_value": 150.0736,
+    "physical_value": 9.878533333333332,
+    "sleep_value": 3379.284892105263,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -1039,39 +319,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.21042361089751463,
-        "base_feature": "stress",
-        "actual_value": 12.443733333333332,
-        "raw_value": 87.10613333333333,
-        "value_interpretation": "Stress: 0.2 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.16782766330592985,
-        "base_feature": "sleep",
-        "actual_value": 462.48391842105264,
-        "raw_value": 3237.3874289473683,
-        "value_interpretation": "Sleep: 7.7 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.06560960430844709,
-        "base_feature": "person",
-        "actual_value": 3.0,
-        "raw_value": 3.0
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.06135585160874193,
-        "base_feature": "physical",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Physical activity: 0.0 hours per day"
-      }
-    ],
+    "stress_value": 87.10613333333333,
+    "physical_value": 0.0,
+    "sleep_value": 3237.3874289473683,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -1082,39 +332,9 @@
     "actual_outcome": 1,
     "correct_prediction": 0,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.21042361089751463,
-        "base_feature": "stress",
-        "actual_value": 89.30201904761905,
-        "raw_value": 625.1141333333334,
-        "value_interpretation": "Stress: 1.5 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.16782766330592985,
-        "base_feature": "sleep",
-        "actual_value": 462.48391842105264,
-        "raw_value": 3237.3874289473683,
-        "value_interpretation": "Sleep: 7.7 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.06560960430844709,
-        "base_feature": "person",
-        "actual_value": 3.0,
-        "raw_value": 3.0
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.06135585160874193,
-        "base_feature": "physical",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Physical activity: 0.0 hours per day"
-      }
-    ],
+    "stress_value": 625.1141333333334,
+    "physical_value": 0.0,
+    "sleep_value": 3237.3874289473683,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -1125,39 +345,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 324.2421333333333,
-        "raw_value": 2269.694933333333,
-        "value_interpretation": "Stress: 5.4 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 43.4012,
-        "raw_value": 303.8084,
-        "value_interpretation": "Physical activity: 0.7 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 414.0183238095238,
-        "raw_value": 2898.1282666666666,
-        "value_interpretation": "Sleep: 6.9 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 4.0,
-        "raw_value": 4.0
-      }
-    ],
+    "stress_value": 2269.694933333333,
+    "physical_value": 303.8084,
+    "sleep_value": 2898.1282666666666,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -1168,39 +358,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 289.15413333333333,
-        "raw_value": 2024.0789333333332,
-        "value_interpretation": "Stress: 4.8 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 34.90779047619047,
-        "raw_value": 244.3545333333333,
-        "value_interpretation": "Physical activity: 0.6 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 372.71714285714285,
-        "raw_value": 2609.02,
-        "value_interpretation": "Sleep: 6.2 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 4.0,
-        "raw_value": 4.0
-      }
-    ],
+    "stress_value": 2024.0789333333332,
+    "physical_value": 244.3545333333333,
+    "sleep_value": 2609.02,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -1211,39 +371,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 132.63558095238096,
-        "raw_value": 928.4490666666668,
-        "value_interpretation": "Stress: 2.2 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 13.378609523809526,
-        "raw_value": 93.65026666666668,
-        "value_interpretation": "Physical activity: 0.2 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 520.1113581101191,
-        "raw_value": 3640.7795067708334,
-        "value_interpretation": "Sleep: 8.7 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 1.0,
-        "raw_value": 1.0
-      }
-    ],
+    "stress_value": 928.4490666666668,
+    "physical_value": 93.65026666666668,
+    "sleep_value": 3640.7795067708334,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -1254,39 +384,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 142.19253333333333,
-        "raw_value": 995.3477333333334,
-        "value_interpretation": "Stress: 2.4 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 11.729085714285716,
-        "raw_value": 82.10360000000001,
-        "value_interpretation": "Physical activity: 0.2 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 523.3601200148809,
-        "raw_value": 3663.5208401041664,
-        "value_interpretation": "Sleep: 8.7 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 1.0,
-        "raw_value": 1.0
-      }
-    ],
+    "stress_value": 995.3477333333334,
+    "physical_value": 82.10360000000001,
+    "sleep_value": 3663.5208401041664,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -1297,39 +397,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.13638755823929188,
-        "base_feature": "stress",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Stress: 0.0 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.12882626288131585,
-        "base_feature": "sleep",
-        "actual_value": 462.48391842105264,
-        "raw_value": 3237.3874289473683,
-        "value_interpretation": "Sleep: 7.7 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.03280715607079695,
-        "base_feature": "person",
-        "actual_value": 3.0,
-        "raw_value": 3.0
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.031968068558584056,
-        "base_feature": "physical",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Physical activity: 0.0 hours per day"
-      }
-    ],
+    "stress_value": 0.0,
+    "physical_value": 0.0,
+    "sleep_value": 3237.3874289473683,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -1340,39 +410,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 38.88937142857143,
-        "raw_value": 272.2256,
-        "value_interpretation": "Stress: 0.6 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 21.019809523809528,
-        "raw_value": 147.1386666666667,
-        "value_interpretation": "Physical activity: 0.4 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 428.72676190476193,
-        "raw_value": 3001.0873333333334,
-        "value_interpretation": "Sleep: 7.1 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 4.0,
-        "raw_value": 4.0
-      }
-    ],
+    "stress_value": 272.2256,
+    "physical_value": 147.1386666666667,
+    "sleep_value": 3001.0873333333334,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -1383,39 +423,9 @@
     "actual_outcome": 1,
     "correct_prediction": 0,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 172.03177142857143,
-        "raw_value": 1204.2224,
-        "value_interpretation": "Stress: 2.9 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 22.43950476190476,
-        "raw_value": 157.07653333333332,
-        "value_interpretation": "Physical activity: 0.4 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 460.35418358396,
-        "raw_value": 3222.4792850877197,
-        "value_interpretation": "Sleep: 7.7 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 3.0,
-        "raw_value": 3.0
-      }
-    ],
+    "stress_value": 1204.2224,
+    "physical_value": 157.07653333333332,
+    "sleep_value": 3222.4792850877197,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -1426,39 +436,9 @@
     "actual_outcome": 1,
     "correct_prediction": 1,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.13638755823929188,
-        "base_feature": "stress",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Stress: 0.0 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.12882626288131585,
-        "base_feature": "sleep",
-        "actual_value": 396.41478721804515,
-        "raw_value": 2774.903510526316,
-        "value_interpretation": "Sleep: 6.6 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.03280715607079695,
-        "base_feature": "person",
-        "actual_value": 3.0,
-        "raw_value": 3.0
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.031968068558584056,
-        "base_feature": "physical",
-        "actual_value": 0.0,
-        "raw_value": 0.0,
-        "value_interpretation": "Physical activity: 0.0 hours per day"
-      }
-    ],
+    "stress_value": 0.0,
+    "physical_value": 0.0,
+    "sleep_value": 2774.903510526316,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -1469,39 +449,9 @@
     "actual_outcome": 1,
     "correct_prediction": 0,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 138.7064380952381,
-        "raw_value": 970.9450666666668,
-        "value_interpretation": "Stress: 2.3 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 7.4277333333333315,
-        "raw_value": 51.99413333333332,
-        "value_interpretation": "Physical activity: 0.1 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 507.58531860119047,
-        "raw_value": 3553.0972302083333,
-        "value_interpretation": "Sleep: 8.5 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 1.0,
-        "raw_value": 1.0
-      }
-    ],
+    "stress_value": 970.9450666666668,
+    "physical_value": 51.99413333333332,
+    "sleep_value": 3553.0972302083333,
     "timestamp": "2025-05-14 13:32:39"
   },
   {
@@ -1512,39 +462,9 @@
     "actual_outcome": 1,
     "correct_prediction": 0,
     "threshold_used": 0.3,
-    "top_factors": [
-      {
-        "feature": "stress_m_7_days",
-        "importance": 0.20018684997042527,
-        "base_feature": "stress",
-        "actual_value": 51.83215238095238,
-        "raw_value": 362.82506666666666,
-        "value_interpretation": "Stress: 0.9 hours per day"
-      },
-      {
-        "feature": "physical_activity_m_7_days",
-        "importance": 0.18245658094316036,
-        "base_feature": "physical",
-        "actual_value": 7.075257142857143,
-        "raw_value": 49.5268,
-        "value_interpretation": "Physical activity: 0.1 hours per day"
-      },
-      {
-        "feature": "sleep_m_7_days",
-        "importance": 0.07169178124191129,
-        "base_feature": "sleep",
-        "actual_value": 464.59587932330834,
-        "raw_value": 3252.171155263158,
-        "value_interpretation": "Sleep: 7.7 hours per day"
-      },
-      {
-        "feature": "person_id",
-        "importance": 0.0468562490567563,
-        "base_feature": "person",
-        "actual_value": 3.0,
-        "raw_value": 3.0
-      }
-    ],
+    "stress_value": 362.82506666666666,
+    "physical_value": 49.5268,
+    "sleep_value": 3252.171155263158,
     "timestamp": "2025-05-14 13:32:39"
   }
 ]
