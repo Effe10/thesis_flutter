@@ -1,4 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +19,29 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class PredictionEntry {
+  final int personId;
+  final String date;
+  final double predictionProbability;
+  final int actualOutcome;
+
+  PredictionEntry({
+    required this.personId,
+    required this.date,
+    required this.predictionProbability,
+    required this.actualOutcome, 
+  });
+
+  factory PredictionEntry.fromJson(Map<String, dynamic> json) {
+    return PredictionEntry(
+      personId: json['person_id'],
+      date: json['date'],
+      predictionProbability: (json['prediction_probability'] as num).toDouble(),
+      actualOutcome: json['actual_outcome'] as int,
+    );
+  }
+}
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -26,90 +51,216 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int selectedChart = 0;
+  List<PredictionEntry> allEntries = [];
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  Future<void> loadData() async {
+    final String jsonString = await rootBundle.loadString('assets/test_predictions_history.json');
+    final List<dynamic> jsonData = json.decode(jsonString);
+    setState(() {
+      allEntries = jsonData.map((e) => PredictionEntry.fromJson(e)).toList();
+      isLoading = false;
+    });
+  }
+
+  List<PredictionEntry> entriesForPerson(int personId) {
+    return allEntries
+        .where((e) => e.personId == personId)
+        .toList()
+      ..sort((a, b) => DateTime.parse(a.date).compareTo(DateTime.parse(b.date)));
+  }
 
   Widget _buildChart() {
-    switch (selectedChart) {
-      case 0:
-        return LineChart(
-          LineChartData(
-            lineBarsData: [
-              LineChartBarData(
-                spots: const [
-                  FlSpot(0, 0),
-                  FlSpot(1, 3),
-                  FlSpot(2, 6),
-                  FlSpot(3, 4),
-                  FlSpot(4, 8),
-                  FlSpot(5, 12)
-                ],
-                barWidth: 5,
-                color: const Color.fromARGB(153, 103, 187, 255),
-                isCurved: true,
-                belowBarData: BarAreaData(
-                  color: const Color.fromARGB(110, 103, 187, 255),
-                  show: true,
-                ),
-              ),
-            ],
-          ),
-        );
-      case 1:
-        return BarChart(
-          BarChartData(
-            barGroups: [
-              BarChartGroupData(x: 0, barRods: [
-                BarChartRodData(toY: 8, color: Colors.blue)
-              ]),
-              BarChartGroupData(x: 1, barRods: [
-                BarChartRodData(toY: 10, color: Colors.blue)
-              ]),
-              BarChartGroupData(x: 2, barRods: [
-                BarChartRodData(toY: 14, color: Colors.blue)
-              ]),
-              BarChartGroupData(x: 3, barRods: [
-                BarChartRodData(toY: 15, color: Colors.blue)
-              ]),
-            ],
-          ),
-        );
-      case 2:
-        return PieChart(
-          PieChartData(
-            sections: [
-              PieChartSectionData(value: 40, color: Colors.blue, title: '40%'),
-              PieChartSectionData(value: 30, color: Colors.red, title: '30%'),
-              PieChartSectionData(value: 15, color: Colors.green, title: '15%'),
-              PieChartSectionData(value: 15, color: Colors.orange, title: '15%'),
-            ],
-          ),
-        );
-      case 3:
-        return LineChart(
-          LineChartData(
-            lineBarsData: [
-              LineChartBarData(
-                spots: const [
-                  FlSpot(0, 5),
-                  FlSpot(1, 2),
-                  FlSpot(2, 8),
-                  FlSpot(3, 6),
-                  FlSpot(4, 7),
-                  FlSpot(5, 3)
-                ],
-                barWidth: 5,
-                color: Colors.red,
-                isCurved: false,
-                belowBarData: BarAreaData(
-                  color: const Color.fromARGB(80, 244, 67, 54),
-                  show: true,
-                ),
-              ),
-            ],
-          ),
-        );
-      default:
-        return const SizedBox.shrink();
+    if (isLoading) {
+      return const Center(child: CircularProgressIndicator());
     }
+    final personIds = [1, 2, 3, 4];
+    final entries = entriesForPerson(personIds[selectedChart]);
+    if (entries.isEmpty) return const Text('No data for this person');
+
+    // Convert date strings to DateTime and sort
+    final sortedEntries = entries
+      .map((e) => MapEntry(DateTime.parse(e.date), e))
+      .toList()
+      ..sort((a, b) => a.key.compareTo(b.key));
+
+    // Map dates to x values (0, 1, 2, ...)
+    final dateList = sortedEntries.map((e) => e.key).toList();
+
+    return LineChart(
+      LineChartData(
+        minY: 0,
+        maxY: 1,
+        lineBarsData: [
+          LineChartBarData(
+            preventCurveOverShooting: true,
+            preventCurveOvershootingThreshold: 25,
+            spots: List.generate(
+              sortedEntries.length,
+              (i) => FlSpot(
+                i.toDouble(),
+                sortedEntries[i].value.predictionProbability,
+              ),
+            ),
+            barWidth: 4,
+            color: Colors.blue,
+            isCurved: true,
+            belowBarData: BarAreaData(
+              color: const Color.fromARGB(62, 33, 149, 243),
+              show: true,
+            ),
+            dotData: FlDotData(
+              show: true,
+              getDotPainter: (spot, percent, barData, index) {
+                return FlDotCirclePainter(
+                  radius: 4,
+                  color: Colors.blue,
+                  strokeWidth: 2,
+                  strokeColor: Colors.white,
+                );
+              },
+            ),
+          ),
+        ],
+        titlesData: FlTitlesData(
+          bottomTitles: AxisTitles(
+            sideTitles: SideTitles(
+              showTitles: true,
+                getTitlesWidget: (value, meta) {
+                int idx = value.toInt();
+                if (idx < 0 || idx >= dateList.length) return const SizedBox.shrink();
+                final date = dateList[idx];
+                // Show as yyyy-MM-dd
+                return Text('${date.year.toString()}\n${date.month.toString().padLeft(2, '0')}/${date.day.toString().padLeft(2, '0')}');
+              },
+              interval: 2,
+              maxIncluded: false,
+              minIncluded: true,
+              reservedSize: 40,
+            ),
+          ),
+          leftTitles: AxisTitles(
+            sideTitles: SideTitles(
+              showTitles: true,
+              interval: 0.2,
+              reservedSize: 40,
+              maxIncluded: true,
+              minIncluded: false,
+              getTitlesWidget: (value, meta) {
+                return Text(
+                  '${(value * 100).toStringAsFixed(0)}%'
+                );
+              },
+            ),
+          ),
+          rightTitles: AxisTitles(
+            sideTitles: SideTitles(showTitles: false),
+          ),
+          topTitles: AxisTitles(
+            sideTitles: SideTitles(showTitles: false),
+          ),
+        ),
+        gridData: FlGridData(
+          horizontalInterval: 0.2,
+          verticalInterval: 1,
+          getDrawingHorizontalLine: (value) {
+            return FlLine(
+              color: const Color.fromARGB(255, 224, 224, 224),
+              strokeWidth: 1,
+            );
+          },
+        ),
+        lineTouchData: LineTouchData(
+          touchTooltipData: LineTouchTooltipData(
+            fitInsideHorizontally: true,
+            fitInsideVertically: true,
+            tooltipRoundedRadius: 8,
+            getTooltipItems: (List<LineBarSpot> touchedSpots) {
+              return touchedSpots.map((spot) {
+                final entry = sortedEntries[spot.x.toInt()].value;
+                return LineTooltipItem(
+                  '${entry.date}\n${(entry.predictionProbability * 100).toStringAsFixed(1)}%',
+                  const TextStyle(color: Colors.white),
+                );
+              }).toList();
+            },
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildPieChart() {
+    if (isLoading) {
+      return const Center(child: CircularProgressIndicator());
+    }
+    final personIds = [1, 2, 3, 4];
+    final entries = entriesForPerson(personIds[selectedChart]);
+    if (entries.isEmpty) return const Text('No data for this person');
+    final lastValue = entries.last.predictionProbability.clamp(0.0, 1.0);
+
+    // Function to determine color based on value
+    Color getPieColor(double value) {
+      if (value >= 0.8) {
+        return Colors.red;
+      } else if (value >= 0.5) {
+        return Colors.orange;
+      } else {
+        return Colors.green;
+      }
+    }
+
+    final pieColor = getPieColor(lastValue);
+
+    return Column(
+      children: [
+        SizedBox(
+          height: 100,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              PieChart(
+                PieChartData(
+                  startDegreeOffset: 270,
+                  sections: [
+                    PieChartSectionData(
+                      value: lastValue * 100,
+                      color: pieColor,
+                      title: '',
+                      radius: 50,
+                    ),
+                    PieChartSectionData(
+                      value: (1 - lastValue) * 100,
+                      color: Colors.grey[300],
+                      title: '',
+                      radius: 50,
+                    ),
+                  ],
+                  sectionsSpace: 0,
+                  centerSpaceRadius: 30,
+                ),
+              ),
+              Text(
+                '${(lastValue * 100).toStringAsFixed(1)}%',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: pieColor,
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 40),
+        const Text('Prediction Probability'),
+      ],
+    );
   }
 
   @override
@@ -121,24 +272,26 @@ class _HomePageState extends State<HomePage> {
         children: [
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            child: Wrap(
+              spacing: 8.0,
+              runSpacing: 8.0,
+              alignment: WrapAlignment.center,
               children: [
                 ElevatedButton(
                   onPressed: () => setState(() => selectedChart = 0),
-                  child: const Text('Line 1'),
+                  child: const Text('Person 1'),
                 ),
                 ElevatedButton(
                   onPressed: () => setState(() => selectedChart = 1),
-                  child: const Text('Bar'),
+                  child: const Text('Person 2'),
                 ),
                 ElevatedButton(
                   onPressed: () => setState(() => selectedChart = 2),
-                  child: const Text('Pie'),
+                  child: const Text('Person 3'),
                 ),
                 ElevatedButton(
                   onPressed: () => setState(() => selectedChart = 3),
-                  child: const Text('Line 2'),
+                  child: const Text('Person 4'),
                 ),
               ],
             ),
@@ -146,8 +299,20 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             child: Center(
               child: AspectRatio(
-                aspectRatio: 2.0,
-                child: _buildChart(),
+                aspectRatio: 0.75,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _buildPieChart(),
+                    const SizedBox(height: 24),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 15.0),
+                        child: _buildChart(),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
